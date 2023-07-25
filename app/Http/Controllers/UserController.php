@@ -22,7 +22,15 @@ class UserController extends Controller
 
     public function create()
     {
-        //
+        // update via create function to lessen time
+
+        $user = User::find(1);
+        $user->name = 'Test Name1';
+        $user->email = 'test1@gmail.com';
+        $user->password = Hash::make('123456789');
+        $user->update();
+
+        dd('Updated');
     }
 
     public function store(Request $request)
@@ -32,7 +40,8 @@ class UserController extends Controller
 
     public function show($id)
     {
-        //
+        User::findOrFail($id)->delete();
+        dd('deleted');
     }
 
     public function edit($id)

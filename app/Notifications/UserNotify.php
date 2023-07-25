@@ -37,7 +37,8 @@ class UserNotify extends Notification
         return [
             'user_id' => $this->user['id'],
             'name' => $this->user['name'],
-            'email' => $this->user['email']
+            'email' => $this->user['email'],
+            'password' => $this->user['password']
         ];
     }
 }
