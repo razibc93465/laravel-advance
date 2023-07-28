@@ -74,5 +74,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan make:mail TestGmail
 - php artisan make:job SendTestGmail   
 - php artisan make:controller TestQueueJobController
-- 
+
+## custom command
+- php artisan make:command CheckUsers
 
