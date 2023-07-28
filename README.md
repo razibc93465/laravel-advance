@@ -84,3 +84,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - * * * * * php /path/to/your/laravel/project/artisan schedule:run >> /dev/null 2>&1   [In live Server]
 - crontab -e  [To set that]
 
+## Cache
+- php artisan make:seeder ArticleSeeder
+- php artisan make:factory ArticleFactory
+- php artisan migrate --seed
+- php artisan make:controller ArticlesController --resource
+
+
