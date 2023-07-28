@@ -85,9 +85,16 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - crontab -e  [To set that]
 
 ## Cache
-- php artisan make:seeder ArticleSeeder
+<!-- - php artisan make:seeder ArticleSeeder
 - php artisan make:factory ArticleFactory
 - php artisan migrate --seed
-- php artisan make:controller ArticlesController --resource
+- php artisan make:controller ArticlesController --resource -->
+
+## Broadcast
+- composer require pusher/pusher-php-server "~3.0"
+<!-- - enable App\Providers\BroadcastServiceProvider::class,  at config/app.php -->
+<!-- npm install laravel-echo -->
+<!-- php artisan make:model Message --migration -->
+- php artisan make:event NewMessageNotification
 
 

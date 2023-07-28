@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\TestQueueJobController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('user', UserController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('sending-queue-mails', [TestQueueJobController::class,'sendTestMails']);
+Route::get('message/index', [MessageController::class, 'index']);
+Route::get('message/send', [MessageController::class, 'send']);
 
+require __DIR__ . '/auth.php';
