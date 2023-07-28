@@ -69,5 +69,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan notifications:table
 - php artisan make:notification UserNotify
 
-
+## Queue Job
+- php artisan queue:table
+- php artisan make:mail TestGmail
+- php artisan make:job SendTestGmail   
+- php artisan make:controller TestQueueJobController
+- 
 
