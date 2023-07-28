@@ -21,7 +21,7 @@ class TestQueueJobController extends Controller
     {
         $data = array(
             'to' => 'test@queue.job',
-            'sub' => 'Mail Send via queue job',
+            'sub' => 'Mail Send via Schedule',
             'body' => "Mail Body Here",
             'name' => "Test Name"
         );

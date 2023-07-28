@@ -74,7 +74,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan make:mail TestGmail
 - php artisan make:job SendTestGmail   
 - php artisan make:controller TestQueueJobController
+- php artisan queue:work
 
 ## custom command
 - php artisan make:command CheckUsers
+
+## Schedule Command
+- php artisan queue:work    [In Local server]  
+- * * * * * php /path/to/your/laravel/project/artisan schedule:run >> /dev/null 2>&1   [In live Server]
+- crontab -e  [To set that]
 
