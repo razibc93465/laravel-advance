@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Http\Controllers\TestQueueJobController;
 use App\Mail\TestGmail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -22,7 +23,11 @@ class SendTestGmail implements ShouldQueue
 
     public function handle()
     {
-        $email = new TestGmail();
-        Mail::to('test@queue.job')->send($email);
+        // Using Mail Class
+        // $email = new TestGmail();
+        // Mail::to('test@queue.job')->send($email);
+
+        // or using Controller function
+        (new TestQueueJobController)->sendMail();
     }
 }
