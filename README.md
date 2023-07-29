@@ -97,4 +97,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <!-- php artisan make:model Message --migration -->
 - php artisan make:event NewMessageNotification
 
-
+## Event 
+- php artisan make:event UserloginHistory
+- php artisan make:listener StoreLoginHistory --event=UserLoginHistory
+- 
