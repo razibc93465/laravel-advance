@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PusherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,10 @@ Route::get('/dashboard', function () {
 
 Route::get('message/index', [MessageController::class, 'index']);
 Route::get('message/send', [MessageController::class, 'send']);
+
+Route::get('/', [PusherController::class, 'index']);
+Route::post('/broadcast', [PusherController::class, 'broadcast']);
+Route::post('/receive', [PusherController::class, 'receive']);
+
 
 require __DIR__ . '/auth.php';
